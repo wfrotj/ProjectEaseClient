@@ -11,7 +11,7 @@ function About() {
         technology-driven solutions, the project aims to empower teachers to
         achieve their full potential in the teaching process.
       </p>
-      <p>
+      <div>
         Key highlights of the project include:
         <ol>
           <li>
@@ -44,7 +44,7 @@ function About() {
             continuous improvement cycle in the teaching process.
           </li>
         </ol>
-      </p>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 function Profile() {
   return (
@@ -16,6 +17,12 @@ function Profile() {
           <p>depEdEmail</p>
         </div>
       </div>
+      <button>
+        <NavLink to="/profile/register">Register</NavLink>
+      </button>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 }
