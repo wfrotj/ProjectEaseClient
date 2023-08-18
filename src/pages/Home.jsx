@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home() {
+function Home({ user, setUser }) {
   return <div>This is the homepage</div>;
 }
 
