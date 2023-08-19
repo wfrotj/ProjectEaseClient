@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import loginService from "../services/loginService";
+import teacherService from "../services/teacherService";
 
 function Login({ user, setUser }) {
   const [username, setUsername] = useState("");
@@ -17,10 +18,12 @@ function Login({ user, setUser }) {
       })
       .then((res) => {
         window.localStorage.setItem("loggedTeacher", JSON.stringify(res));
-        loginService.setToken(res);
+        teacherService.setToken(res);
         navigate("/");
+
         setUsername("");
         setPassword("");
+        location.reload();
       })
       .catch((error) => console.log(error));
   };

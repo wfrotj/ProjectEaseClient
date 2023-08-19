@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function PersonalData({ user, setUser }) {
   const { username, firstName, lastName, age, employeeNumber, depEdEmail } =
@@ -10,7 +11,6 @@ function PersonalData({ user, setUser }) {
   };
   return (
     <div>
-      {" "}
       <div>
         <h1>Welcome {username}</h1>
       </div>
@@ -23,6 +23,9 @@ function PersonalData({ user, setUser }) {
           <p>Employee Number: {employeeNumber}</p>
           <p>DepEd Email: {depEdEmail}</p>
         </div>
+      </div>
+      <div>
+        <Link to="/dashboard">Click here to daashboard</Link>
       </div>
       <button onClick={handleLogout}>LOGOUT</button>
     </div>

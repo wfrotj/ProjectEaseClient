@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
-import loginService from "../services/loginService";
 
 import { NavLink, Outlet } from "react-router-dom";
 import PersonalData from "../pages/PersonalData";
+import teacherService from "../services/teacherService";
+import Dashboard from "../pages/Dashboard";
 function ProfileLayout({ user, setUser }) {
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem("loggedTeacher");
@@ -11,7 +12,7 @@ function ProfileLayout({ user, setUser }) {
     if (loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON);
       setUser(user);
-      loginService.setToken(user.token);
+      teacherService.setToken(user.token);
     }
   }, []);
   return (
@@ -40,7 +41,9 @@ function ProfileLayout({ user, setUser }) {
           </div>
         </div>
       ) : (
-        <PersonalData setUser={setUser} user={user} />
+        <>
+          <PersonalData setUser={setUser} user={user} />
+        </>
       )}
     </div>
   );
