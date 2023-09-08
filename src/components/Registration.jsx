@@ -26,6 +26,7 @@ function Registration() {
         age,
         employeeNumber,
         depEdEmail,
+        gradeLevel,
       })
       .then((res) => {
         console.log(res);
