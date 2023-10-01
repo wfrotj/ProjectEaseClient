@@ -4,9 +4,9 @@ import Upload from "../components/Upload";
 function LessonPlan() {
   return (
     <div>
-      <h1>LessonPlan</h1>
+      <h1>Lesson Plan Builder</h1>
       <div>
-        <Upload />
+        <form onsubmit=""></form>
       </div>
     </div>
   );
