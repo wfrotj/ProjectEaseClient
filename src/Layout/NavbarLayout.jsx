@@ -1,22 +1,19 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import teacherService from "../services/teacherService";
 
 function NavbarLayout({ user }) {
   return (
-    <div>
+    <nav>
       <header className="navbar-layout">
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="about">About</NavLink>
-          <NavLink to="profile">Profile</NavLink>
-          {user ? <NavLink to="dashboard">Dashboard</NavLink> : null}
+          <Link to="/">Home</Link>
+          <Link to="about">About</Link>
+          <Link to="profile">Profile</Link>
+          {user ? <Link to="dashboard">Rpms</Link> : null}
         </nav>
       </header>
-      <main>
-        <Outlet />
-      </main>
-    </div>
+    </nav>
   );
 }
 

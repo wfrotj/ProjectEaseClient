@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCd-5piicNwJ1cqiTKV5kmKERzMz9qZwEY",
-  authDomain: "project-ease-e14b1.firebaseapp.com",
-  projectId: "project-ease-e14b1",
-  storageBucket: "project-ease-e14b1.appspot.com",
-  messagingSenderId: "422755895512",
-  appId: "1:422755895512:web:930eae76be08297fd62fad",
-  measurementId: "G-WTXZS90DMC",
+  apiKey: import.meta.env.apiKey,
+  authDomain: import.meta.env.authDomain,
+  projectId: import.meta.env.projectId,
+  storageBucket: import.meta.env.storageBucket,
+  messagingSenderId: import.meta.env.messagingSenderId,
+  appId: import.meta.env.appId,
+  measurementId: import.meta.env.measurementId,
 };
 
 const app = initializeApp(firebaseConfig);
