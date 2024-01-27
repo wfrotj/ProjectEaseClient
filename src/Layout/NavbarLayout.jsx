@@ -10,7 +10,7 @@ function NavbarLayout({ user }) {
           <Link to="/">Home</Link>
           <Link to="about">About</Link>
           <Link to="profile">Profile</Link>
-          {user ? <Link to="dashboard">Rpms</Link> : null}
+          {user ? <Link to="rpms">Rpms</Link> : null}
         </nav>
       </header>
     </nav>

@@ -40,10 +40,7 @@ function App() {
         <Route path="/profile/register" element={<Registration />} />
         <Route path="/profile/login" element={<Login />} />
 
-        <Route
-          path="/dashboard"
-          element={<Rpms setUser={setUser} user={user} />}
-        />
+        <Route path="/rpms" element={<Rpms setUser={setUser} user={user} />} />
         {/* <Route path="/dashboard/overview" element={<Dashboard />} />
         <Route path="/dashboard/lessonplan" element={<LessonPlan />} /> */}
       </Routes>
